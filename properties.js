@@ -147,7 +147,7 @@ export const properties = [
             garage: 1,
             status: "En Planos"
         },
-        images: ["01.png"]
+        images: ["01.webp"]
     },
     {
         id: "11",
@@ -162,7 +162,7 @@ export const properties = [
             garage: 1,
             status: "En Planos"
         },
-        images: ["01.png"]
+        images: ["01.webp"]
     },
 
     {
@@ -178,7 +178,7 @@ export const properties = [
             garage: 2,
             status: "En Planos"
         },
-        images: ["01.png"]
+        images: ["01.webp"]
     },
 
     {
@@ -194,7 +194,7 @@ export const properties = [
             garage: 2,
             status: "En Planos"
         },
-        images: ["01.png"]
+        images: ["01.webp"]
     },
     {
         id: "14",
@@ -209,7 +209,7 @@ export const properties = [
             garage: 2,
             status: "En Planos"
         },
-        images: ["01.png"]
+        images: ["01.webp"]
     },
     {
         id: "15",
@@ -224,7 +224,7 @@ export const properties = [
             garage: 2,
             status: "En Planos"
         },
-        images: ["01.png"]
+        images: ["01.webp"]
     },
     {
         id: "16",
@@ -239,7 +239,7 @@ export const properties = [
             garage: 2,
             status: "En Planos"
         },
-        images: ["01.png"]
+        images: ["01.webp"]
     },
     {
         id: "17",
@@ -254,7 +254,7 @@ export const properties = [
             garage: 1,
             status: "En Planos"
         },
-        images: ["01.png"]
+        images: ["01.webp"]
     },
     {
         id: "18",
@@ -269,7 +269,129 @@ export const properties = [
             garage: 1,
             status: "En Planos"
         },
-        images: ["01.png"]
+        images: ["01.webp"]
+    },
+    {
+        id: "19",
+        title: "Garza Real, Modelo Bonsai",
+        price: "L. 1,000,000",
+        type: "Modern Family Residence",
+        mapUrl: "https://maps.app.goo.gl/tYb4s1oERSha8y2EA",
+        locationText: "Ver ubicación, Catacamas",
+        features: {
+            beds: 2,
+            baths: 1,
+            garage: 1,
+            status: "En Planos"
+        },
+        images: ["01.webp"]
+    },
+
+    {
+        id: "20",
+        title: "Garza Real, Modelo Bonsai 2",
+        price: "L. 1,348,000",
+        type: "Modern Family Residence",
+        mapUrl: "https://maps.app.goo.gl/tYb4s1oERSha8y2EA",
+        locationText: "Ver ubicación, Catacamas",
+        features: {
+            beds: 2,
+            baths: 2,
+            garage: 1,
+            status: "En Planos"
+        },
+        images: ["01.webp"]
+    },
+
+    {
+        id: "21",
+        title: "Garza Real, Modelo Bonsai 3",
+        price: "L. 1,200,000",
+        type: "Modern Family Residence",
+        mapUrl: "https://maps.app.goo.gl/tYb4s1oERSha8y2EA",
+        locationText: "Ver ubicación, Catacamas",
+        features: {
+            beds: 2,
+            baths: 1,
+            garage: 1,
+            status: "En Planos"
+        },
+        images: ["01.webp"]
+    },
+    {
+        id: "22",
+        title: "Garza Real, Modelo Málaga",
+        price: "L. 1,348,000",
+        type: "Modern Family Residence",
+        mapUrl: "https://maps.app.goo.gl/tYb4s1oERSha8y2EA",
+        locationText: "Ver ubicación, Catacamas",
+        features: {
+            beds: 2,
+            baths: 2,
+            garage: 1,
+            status: "En Planos"
+        },
+        images: ["01.webp"]
+    },
+    {
+        id: "23",
+        title: "Garza Real, Modelo Venecia",
+        price: "L. 1,365,000",
+        type: "Modern Family Residence",
+        mapUrl: "https://maps.app.goo.gl/tYb4s1oERSha8y2EA",
+        locationText: "Ver ubicación, Catacamas",
+        features: {
+            beds: 3,
+            baths: 1,
+            garage: 1,
+            status: "En Planos"
+        },
+        images: ["01.webp"]
+    },
+    {
+        id: "24",
+        title: "Garza Real, Modelo Venecia 2",
+        price: "L. 1,451,000",
+        type: "Modern Family Residence",
+        mapUrl: "https://maps.app.goo.gl/tYb4s1oERSha8y2EA",
+        locationText: "Ver ubicación, Catacamas",
+        features: {
+            beds: 3,
+            baths: 2,
+            garage: 1,
+            status: "En Planos"
+        },
+        images: ["01.webp"]
+    },
+    {
+        id: "25",
+        title: "Garza Real, Modelo Arango",
+        price: "L. 1,500,000",
+        type: "Modern Family Residence",
+        mapUrl: "https://maps.app.goo.gl/tYb4s1oERSha8y2EA",
+        locationText: "Ver ubicación, Catacamas",
+        features: {
+            beds: 3,
+            baths: 2,
+            garage: 1,
+            status: "En Planos"
+        },
+        images: ["01.webp"]
+    },
+    {
+        id: "26",
+        title: "Garza Real, Modelo Marsella",
+        price: "L. 1,652,000",
+        type: "Modern Family Residence",
+        mapUrl: "https://maps.app.goo.gl/tYb4s1oERSha8y2EA",
+        locationText: "Ver ubicación, Catacamas",
+        features: {
+            beds: 3,
+            baths: 2,
+            garage: 1,
+            status: "En Planos"
+        },
+        images: ["01.webp"]
     }
 
 ];
