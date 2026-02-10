@@ -89,6 +89,23 @@ header p {
     transform: scale(1.05);
 }
 
+.sold-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ef4444;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+    pointer-events: none;
+}
+
 .card-content {
     padding: 1.5rem;
     display: flex;

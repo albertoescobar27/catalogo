@@ -12,7 +12,8 @@ export const properties = [
             garage: 2,
             status: "Excelente estado"
         },
-        images: ["01.webp", "02.webp", "03.webp", "04.jpg", "05.webp", "06.webp", "07.webp"]
+        images: ["01.webp", "02.webp", "03.webp", "04.jpg", "05.webp", "06.webp", "07.webp"],
+        isSold: false
     },
     {
         id: "02",
@@ -27,7 +28,8 @@ export const properties = [
             garage: 2,
             status: "Nueva"
         },
-        images: ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp", "08.webp", "09.jpg"]
+        images: ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp", "08.webp", "09.jpg"],
+        isSold: true
     },
     {
         id: "03",
@@ -42,7 +44,8 @@ export const properties = [
             garage: 2,
             status: "Nueva"
         },
-        images: ["1.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp", "08.webp", "09.webp"]
+        images: ["1.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp", "08.webp", "09.webp"],
+        isSold: false
     },
     {
         id: "04",
@@ -57,7 +60,8 @@ export const properties = [
             garage: 3,
             status: "Nueva"
         },
-        images: ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp", "08.webp", "09.webp", "10.webp"]
+        images: ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp", "08.webp", "09.webp", "10.webp"],
+        isSold: false
     },
     {
         id: "05",
@@ -72,7 +76,8 @@ export const properties = [
             garage: 2,
             status: "Excelente estado"
         },
-        images: ["01.webp", "02.webp", "03.webp", "04.jpeg", "05.jpeg", "06.jpeg", "07.jpeg"]
+        images: ["01.webp", "02.webp", "03.webp", "04.jpeg", "05.jpeg", "06.jpeg", "07.jpeg"],
+        isSold: false
     },
     {
         id: "06",
@@ -87,7 +92,8 @@ export const properties = [
             garage: 0,
             status: "Excelente estado"
         },
-        images: ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp", "08.webp", "09.webp", "10.webp"]
+        images: ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp", "08.webp", "09.webp", "10.webp"],
+        isSold: false
     },
     {
         id: "07",
@@ -102,7 +108,8 @@ export const properties = [
             garage: 2,
             status: "Nueva"
         },
-        images: ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp", "08.webp", "09.webp"]
+        images: ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp", "06.webp", "07.webp", "08.webp", "09.webp"],
+        isSold: false
     },
     {
         id: "08",
@@ -117,7 +124,8 @@ export const properties = [
             garage: 1,
             status: "Remodelada"
         },
-        images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg", "08.jpg", "09.jpg"]
+        images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg", "08.jpg", "09.jpg"],
+        isSold: false
     },
     {
         id: "09",
@@ -132,7 +140,8 @@ export const properties = [
             garage: 2,
             status: "Nueva"
         },
-        images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg", "08.jpg", "09.jpg", "10.jpg", "11.jpg", "12.jpg"]
+        images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg", "08.jpg", "09.jpg", "10.jpg", "11.jpg", "12.jpg"],
+        isSold: false
     },
     {
         id: "10",
@@ -147,7 +156,8 @@ export const properties = [
             garage: 1,
             status: "En Planos"
         },
-        images: ["01.webp"]
+        images: ["01.webp"],
+        isSold: false
     },
     {
         id: "11",
@@ -162,9 +172,9 @@ export const properties = [
             garage: 1,
             status: "En Planos"
         },
-        images: ["01.webp"]
+        images: ["01.webp"],
+        isSold: false
     },
-
     {
         id: "12",
         title: "Hacienda Real, Modelo Sauce",
@@ -178,9 +188,9 @@ export const properties = [
             garage: 2,
             status: "En Planos"
         },
-        images: ["01.webp"]
+        images: ["01.webp"],
+        isSold: false
     },
-
     {
         id: "13",
         title: "Hacienda Real, Modelo Sauce 2",
@@ -194,7 +204,8 @@ export const properties = [
             garage: 2,
             status: "En Planos"
         },
-        images: ["01.webp"]
+        images: ["01.webp"],
+        isSold: false
     },
     {
         id: "14",
@@ -209,7 +220,8 @@ export const properties = [
             garage: 2,
             status: "En Planos"
         },
-        images: ["01.webp"]
+        images: ["01.webp"],
+        isSold: false
     },
     {
         id: "15",
@@ -224,7 +236,8 @@ export const properties = [
             garage: 2,
             status: "En Planos"
         },
-        images: ["01.webp"]
+        images: ["01.webp"],
+        isSold: false
     },
     {
         id: "16",
@@ -239,7 +252,8 @@ export const properties = [
             garage: 2,
             status: "En Planos"
         },
-        images: ["01.webp"]
+        images: ["01.webp"],
+        isSold: false
     },
     {
         id: "17",
@@ -254,7 +268,8 @@ export const properties = [
             garage: 1,
             status: "En Planos"
         },
-        images: ["01.webp"]
+        images: ["01.webp"],
+        isSold: false
     },
     {
         id: "18",
@@ -269,7 +284,8 @@ export const properties = [
             garage: 1,
             status: "En Planos"
         },
-        images: ["01.webp"]
+        images: ["01.webp"],
+        isSold: false
     },
     {
         id: "19",
@@ -284,9 +300,9 @@ export const properties = [
             garage: 1,
             status: "En Planos"
         },
-        images: ["01.webp"]
+        images: ["01.webp"],
+        isSold: false
     },
-
     {
         id: "20",
         title: "Garza Real, Modelo Bonsai 2",
@@ -300,9 +316,9 @@ export const properties = [
             garage: 1,
             status: "En Planos"
         },
-        images: ["01.webp"]
+        images: ["01.webp"],
+        isSold: false
     },
-
     {
         id: "21",
         title: "Garza Real, Modelo Bonsai 3",
@@ -316,7 +332,8 @@ export const properties = [
             garage: 1,
             status: "En Planos"
         },
-        images: ["01.webp"]
+        images: ["01.webp"],
+        isSold: false
     },
     {
         id: "22",
@@ -331,7 +348,8 @@ export const properties = [
             garage: 1,
             status: "En Planos"
         },
-        images: ["01.webp"]
+        images: ["01.webp"],
+        isSold: false
     },
     {
         id: "23",
@@ -346,7 +364,8 @@ export const properties = [
             garage: 1,
             status: "En Planos"
         },
-        images: ["01.webp"]
+        images: ["01.webp"],
+        isSold: false
     },
     {
         id: "24",
@@ -361,7 +380,8 @@ export const properties = [
             garage: 1,
             status: "En Planos"
         },
-        images: ["01.webp"]
+        images: ["01.webp"],
+        isSold: false
     },
     {
         id: "25",
@@ -376,7 +396,8 @@ export const properties = [
             garage: 1,
             status: "En Planos"
         },
-        images: ["01.webp"]
+        images: ["01.webp"],
+        isSold: false
     },
     {
         id: "26",
@@ -391,7 +412,8 @@ export const properties = [
             garage: 1,
             status: "En Planos"
         },
-        images: ["01.webp"]
+        images: ["01.webp"],
+        isSold: false
     }
 
 ];

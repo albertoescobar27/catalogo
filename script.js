@@ -88,9 +88,12 @@ function createCard(property) {
     // Map Icon
     const mapIcon = `<svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>`;
 
+    const soldBadge = property.isSold ? '<div class="sold-badge">Vendido</div>' : '';
+
     card.innerHTML = `
         <div class="card-image-wrapper">
-            <img src="assets/imagenes/${property.id}/${coverImage}" alt="${property.title}" loading="lazy">
+            ${soldBadge}
+            <img src="assets/casas/${property.id}/${coverImage}" alt="${property.title}" loading="lazy">
         </div>
         
         <div class="card-content">
@@ -150,7 +153,7 @@ function updateModalImage() {
     if (!currentProperty) return;
 
     const imageName = currentProperty.images[currentImageIndex];
-    modalImg.src = `assets/imagenes/${currentProperty.id}/${imageName}`;
+    modalImg.src = `assets/casas/${currentProperty.id}/${imageName}`;
 
     currentIndexSpan.textContent = currentImageIndex + 1;
     totalImagesSpan.textContent = currentProperty.images.length;
