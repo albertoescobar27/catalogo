@@ -41,6 +41,35 @@ header h1 {
 header p {
     color: var(--text-secondary);
     font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: rgba(30, 58, 138, 0.05);
+}
+
+.filter-btn.active {
+    background-color: var(--accent-color);
+    color: white;
 }
 
 .catalog-grid {

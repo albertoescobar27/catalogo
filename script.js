@@ -9,15 +9,34 @@ const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 const currentIndexSpan = document.getElementById('current-index');
 const totalImagesSpan = document.getElementById('total-images');
+const filterBtns = document.querySelectorAll('.filter-btn');
 
 let currentProperty = null;
 let currentImageIndex = 0;
 let currentPage = 1;
 const itemsPerPage = 6;
+let currentFilter = 'Casa';
 
 // Initialize
 function initCatalog() {
+    setupFilters();
     renderPage(currentPage);
+}
+
+// Setup Filters
+function setupFilters() {
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update active state
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Update filter
+            currentFilter = btn.dataset.category;
+            currentPage = 1; // Reset to first page
+            renderPage(currentPage);
+        });
+    });
 }
 
 // Render Page
@@ -25,23 +44,32 @@ function renderPage(page) {
     currentPage = page;
     catalogContainer.innerHTML = '';
 
+    // Filter properties
+    const filteredProperties = properties.filter(p => p.category === currentFilter);
+
     const start = (page - 1) * itemsPerPage;
     const end = start + itemsPerPage;
-    const paginatedItems = properties.slice(start, end);
+    const paginatedItems = filteredProperties.slice(start, end);
+
+    if (paginatedItems.length === 0) {
+        catalogContainer.innerHTML = '<p class="no-results">No se encontraron propiedades en esta categoría.</p>';
+        paginationContainer.innerHTML = '';
+        return;
+    }
 
     paginatedItems.forEach(property => {
         const card = createCard(property);
         catalogContainer.appendChild(card);
     });
 
-    renderPagination();
+    renderPagination(filteredProperties.length);
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // Render Pagination Controls
-function renderPagination() {
+function renderPagination(totalItems) {
     paginationContainer.innerHTML = '';
-    const totalPages = Math.ceil(properties.length / itemsPerPage);
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
 
     if (totalPages <= 1) return;
 
@@ -77,6 +105,21 @@ function createCard(property) {
     card.className = 'card';
 
     // Cover Image
+    // Check if property is a Lotification to use specific path logic if needed, 
+    // but current properties.js allows handling ID-based folders.
+    // However, lot-01 keeps images in assets/lotificaciones/01 ? 
+    // Wait, properties.js for lot-01 says: images: ["01.webp", ...]. 
+    // Is folder assets/casas/lot-01 or assets/lotificaciones/01?
+    // User request: "En la carpeta lotificaciones usa las imagenes que acabo de poner"
+    // I need to adjust the image path logic.
+
+    let imagePath = `assets/casas/${property.id}/`;
+    if (property.category === 'Lotificación') {
+        // Extract number from id "lot-XX" -> "XX"
+        const folderName = property.id.startsWith('lot-') ? property.id.replace('lot-', '') : property.id;
+        imagePath = `assets/lotificaciones/${folderName}/`;
+    }
+
     const coverImage = property.images[0];
 
     // SVGs for Icons
@@ -90,10 +133,15 @@ function createCard(property) {
 
     const soldBadge = property.isSold ? '<div class="sold-badge">Vendido</div>' : '';
 
+    // Conditionally render features
+    const bedsHtml = property.features.beds > 0 ? `<div class="feature-item">${bedIcon} ${property.features.beds} Recámaras</div>` : '';
+    const bathsHtml = property.features.baths > 0 ? `<div class="feature-item">${bathIcon} ${property.features.baths} Baños</div>` : '';
+    const garageHtml = property.features.garage > 0 ? `<div class="feature-item">${garageIcon} ${property.features.garage} ${property.features.garage === 1 ? 'Vehículo' : 'Vehículos'}</div>` : '';
+
     card.innerHTML = `
         <div class="card-image-wrapper">
             ${soldBadge}
-            <img src="assets/casas/${property.id}/${coverImage}" alt="${property.title}" loading="lazy">
+            <img src="${imagePath}${coverImage}" alt="${property.title}" loading="lazy">
         </div>
         
         <div class="card-content">
@@ -109,9 +157,9 @@ function createCard(property) {
             </a>
             
             <div class="features-grid">
-                <div class="feature-item">${bedIcon} ${property.features.beds} Recámaras</div>
-                <div class="feature-item">${bathIcon} ${property.features.baths} Baños</div>
-                <div class="feature-item">${garageIcon} ${property.features.garage} ${property.features.garage === 1 ? 'Vehículo' : 'Vehículos'}</div>
+                ${bedsHtml}
+                ${bathsHtml}
+                ${garageHtml}
                 <div class="feature-item">${statusIcon} ${property.features.status}</div>
             </div>
             
@@ -153,7 +201,12 @@ function updateModalImage() {
     if (!currentProperty) return;
 
     const imageName = currentProperty.images[currentImageIndex];
-    modalImg.src = `assets/casas/${currentProperty.id}/${imageName}`;
+    let imagePath = `assets/casas/${currentProperty.id}/`;
+    if (currentProperty.category === 'Lotificación') {
+        const folderName = currentProperty.id.startsWith('lot-') ? currentProperty.id.replace('lot-', '') : currentProperty.id;
+        imagePath = `assets/lotificaciones/${folderName}/`;
+    }
+    modalImg.src = `${imagePath}${imageName}`;
 
     currentIndexSpan.textContent = currentImageIndex + 1;
     totalImagesSpan.textContent = currentProperty.images.length;
